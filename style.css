@@ -1,0 +1,298 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.array-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.array-inputs p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.array-inputs input[type=range] {
+    width: 150px;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+.array-inputs input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #00c3ff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 2px #000;
+}
+
+.array-inputs input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #00c3ff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#a_generate {
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#a_generate:hover {
+    background-color: #019bd8;
+    transform: translateY(-2px);
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-heading {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.algos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.algos button {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.algos button:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Complexity_Containers {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.Pair_Definitions {
+    margin-bottom: 10px;
+}
+
+.Sub_Heading {
+    font-weight: bold;
+}
+
+/* Array container styles */
+#array_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    border: 2px dashed #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+/* Animation for array bars */
+@keyframes grow {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.array-bar {
+    width: 5px;
+    background-color: #007bff;
+    margin: 0 1px;
+    animation: grow 0.5s ease-in-out;
+}
+
+/* ===================== FULLY RESPONSIVE STYLES ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .array-inputs,
+    .header_right {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .algos {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .algos button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .array-inputs input[type=range] {
+        width: 100%;
+    }
+
+    .nav-heading {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/* Phones and small screens */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .array-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .array-inputs p {
+        font-size: 14px;
+    }
+
+    .nav-heading {
+        font-size: 18px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .header_right {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .algos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .algos button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    #array_container {
+        height: 180px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .Complexity_Containers {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
